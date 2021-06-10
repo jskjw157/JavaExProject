@@ -8,7 +8,6 @@ public class Program {
 		
 		ExamList list = new ExamList();
 		
-		list.init();
 		
 		int menu;
         
