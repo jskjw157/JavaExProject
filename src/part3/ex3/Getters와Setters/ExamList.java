@@ -28,8 +28,8 @@ public class ExamList {
 	        int eng = exam.getEng();//exam.eng;
 	        int math = exam.getMath();//exam.math;
 	        
-	        int total = eng+kor+math;
-	    	float avg = total/3.0f;
+	        int total = exam.total(); // eng+kor+math;
+	    	float avg = exam.avg(); // total/3.0f;
 	    	
 	    	System.out.printf("국어 : %d\n", kor);	
 	    	System.out.printf("영어 : %d\n", eng);
@@ -79,11 +79,15 @@ public class ExamList {
         		System.out.println("국어성적은 0~100까지의 범위만 입력이 가능합니다.");
         	
         }while(math < 0 || 100 < math);
-        
+        /*
         Exam exam = new Exam();
         exam.setKor(kor);//exam.kor = kor;
         exam.setEng(eng);//exam.eng = eng;
         exam.setMath(math);//exam.math = math;
+        */
+        Exam exam1 = new Exam();
+        
+        Exam exam = new Exam(kor,eng,math);
         
         Exam[] exams = this.exams;
         int size = current;
